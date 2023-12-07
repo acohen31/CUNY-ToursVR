@@ -16,6 +16,10 @@ const { MicroPost } = db;
 //    /api comes from the file ../app.js
 //    /micro_posts comes from the file ./microPosts.js
 
+router.get("/abc", (req, res) => {
+  res.send("Hello World!")
+})
+
 router.get("/", (req, res) => {
   MicroPost.findAll({}).then((allPosts) => res.json(allPosts));
 });
